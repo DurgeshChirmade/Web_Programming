@@ -1,0 +1,19 @@
+a{
+    text-decoration: none;
+}
+li{
+    list-style-type: none;
+    display: inline;
+    padding: 20px;
+    background-color: aquamarine;
+}
+ul{
+    text-align: center;
+}
+body{
+    padding: 30px;
+    margin: 40px;
+}
+li:hover{
+    background-color: yellowgreen;
+}

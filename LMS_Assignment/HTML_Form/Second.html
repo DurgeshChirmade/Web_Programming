@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Second Page</title>
+</head>
+<body>
+    
+    <div>
+        <p style="font-weight: bold;">Visitor Information</p>
+    </div>
+    <hr/>
+    <div>
+        <table border="2" style="border-collapse: collapse;text-align: center;">
+            <form>
+            <tr>
+                <td>Email Address : </td>
+                <td>
+                    <input type="email" name="email"/>
+                </td>
+            </tr>
+            <tr>
+                <td>Do you use web for : </td>
+                <td>
+                    <input type="checkbox" name="c1" />Research &nbsp;
+                    <input type="checkbox" name="c2"/>Purchase &nbsp;
+                </td>
+            </tr>
+            <tr>
+                <td>Occupation : </td>
+                <td>
+                    <select name="oc">
+                        <option hidden disabled selected value> -- select an option -- </option>
+                        <option value="tec">Teacher</option>
+                        <option value="std">Student</option>
+                        <option value="far">Farmer</option>
+                        <option value="pro">Professor</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Want us to send you junk email? : &nbsp;&nbsp;</td>
+                <td>
+                   <input type="radio" name="rad"/>Absolutely &nbsp
+                   <input type="radio" name="rad"/>No way, man 
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="submit">SUBMIT</button>
+                </td>
+                <td>
+                    <button type="reset">RESET</button>
+                </td>
+            </tr>
+            </form>
+        </table>
+    </div>
+
+</body>
+</html>

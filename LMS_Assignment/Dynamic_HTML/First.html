@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Input Javascript</title>
+</head>
+<body>
+    <table border="2" style="border-collapse: collapse;background-color: rgb(228, 79, 9);text-align: center;">
+        <form>
+            <tr>
+                <td>
+                    <label for="num">Enter Number</label>
+                </td>
+                <td>
+                    <input type="number" name="num"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="button" onclick="factFun(num.value)">Factorial</button>
+                </td>
+            </tr>
+        </form>
+    </table>
+
+    <div id="result"></div>
+    <script>
+        var fact=1;
+        function factFun(num){
+            if(num<=1){
+                fact=1;
+                return;
+            }
+            for(let i=num;i>=1;i--){
+                fact*=i;
+            }
+            alert("Factorial of "+num+" is "+fact);
+            document.getElementById("result").innerHTML="Factorial of "+num+" is "+fact;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Addition of Digits</title>
+</head>
+<body>
+    <form>
+        <input type="number" name="num" placeholder="Enter your number for Addition "/>
+        <input type="button" onclick="Addition(num.value)" value="CHECK"/>
+    </form>
+
+    <script>
+        function Addition(num){
+            var sum=0;
+            var temp=num;
+            while(temp>0){
+            sum=sum+temp%10;
+            temp=parseInt(temp/10);
+            }
+            console.log(sum);
+            
+            alert(num+" sum of digits is "+sum);
+        }
+    </script>
+</body>
+</html>

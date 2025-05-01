@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factorial Table</title>
+</head>
+
+<body>
+    <button type="button" onclick="factFun(4)">Factorial Table</button><br><br>
+    <div id="result">...</div>
+
+    <script>
+        function factorial(num){
+            console.log("num "+num);
+            var fact=1;
+            if(num==0 || num==1){
+                return 1;
+            }
+            for(let i=num;i>=1;i--){
+                fact*=i;
+                console.log(fact);
+            }
+            /*
+            while(num>0){
+                fact=fact*num;
+                num--;
+            }
+            */
+            console.log("fact "+fact);
+            return fact;
+        }
+        function factFun(num) {
+            var str = "";
+            str += "<table border=1 style=border-collapse:collapse;background-color:rgb(228,79,9);>";
+            str+="<tr>"+"<th>"+"Number"+"</th>"+"<th>"+"Factorial"+"</th>"+"</tr>"
+            for (i = 1; i <= num; i++) {
+                str += "<tr>";
+                str += "<td>";
+                str+=i+"</td>";
+                str+="<td>"+factorial(i)+"</td>"+"</tr>";
+            }
+            str+="</table>";
+            console.log(str);
+            document.getElementById("result").innerHTML = str;
+        }
+        
+    </script>
+</body>
+
+</html>

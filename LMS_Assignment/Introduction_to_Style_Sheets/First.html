@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEB PAGE</title>
+    <style>
+        body {
+            background-color: pink;
+        }
+
+        #first {
+            color: green;
+            font-size: 20px;
+            margin-left: 20px;
+        }
+
+        #firstdiv {
+            display: flex;
+        }
+
+        #seconddiv {
+            margin-top: 0px;
+        }
+
+        #seconddiv a {
+            text-decoration: none;
+        }
+
+        #seconddiv ul {
+            display: flex;
+            /* FLEX will make li's spread horizontally */
+            justify-content: center;
+            /* OR use space-around / space-between if you want gaps */
+            align-items: center;
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            /* Reset margin */
+            list-style: none;
+            /* Remove default list styles */
+        }
+
+        #seconddiv li {
+            padding: 20px;
+            margin: 10px;
+            margin-bottom: 0px;
+            /* Optional: space between buttons */
+            border-radius: 5px;
+            /* Optional: rounded corners */
+        }
+
+        #seconddiv li a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+
+        #registrationPage {
+            background-image: url(image.jpg);
+            background-size: cover;
+            background-position: center;
+            margin: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 400px;
+            padding: 20px;
+        }
+
+        #registrationPage form {
+            display: flex;
+            flex-direction: column;
+            /* arrange labels and inputs vertically */
+            align-items: center;
+            /* center them horizontally */
+            background-color: rgba(255, 255, 255, 0.8);
+            /* slightly transparent white */
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            /* nice shadow */
+        }
+
+        #registrationPage form input[type="text"],
+        #registrationPage form input[type="email"],
+        #registrationPage form input[type="submit"] {
+            width: 250px;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #aaa;
+            border-radius: 5px;
+        }
+    </style>
+    <script>
+        function showRegistrationPage() {
+            document.getElementById('registrationPage').style.display = 'block';
+        }
+    </script>
+
+</head>
+
+<body>
+    <div id="firstdiv">
+        <img src="images (1).jpeg" alt="CDAC IMAGE" width="100" height="100" />
+        <p id="first">
+            Academy & Consultancy<br />
+            Service Division, Pune.
+        </p>
+    </div>
+    <div id="seconddiv">
+        <ul>
+            <li>
+                <a href="#">Home</a>
+            </li>
+            <li>
+                <a href="#">Courses</a>
+            </li>
+            <li>
+            <li><a href="javascript:void(0);" onclick="showRegistrationPage()">Registration</a></li>
+            </li>
+            <li>
+                <a href="#">Schedule</a>
+            </li>
+            <li>
+                <a href="#">Eligibility</a>
+            </li>
+            <li>
+                <a href="#">Contact Us</a>
+            </li>
+            <li>
+                <a href="#">Feedback</a>
+            </li>
+        </ul>
+        <p style="margin-top: 0px; margin-left: 450px;">Addmission Open</p>
+    </div>
+
+    <div id="registrationPage" style="display: none; margin-top: 30px; padding: 20px; background-color: #fff;">
+        <h2>Registration Form</h2>
+        <form>
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name"><br><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email"><br><br>
+
+            <label for="phone">Phone:</label><br>
+            <input type="text" id="phone" name="phone"><br><br>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+</body>
+
+</html>

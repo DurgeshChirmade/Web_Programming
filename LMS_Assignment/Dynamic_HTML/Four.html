@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palindrome Number</title>
+</head>
+<body>
+    <form>
+        <input type="number" name="num" placeholder="Enter your number for checking palindrome"/>
+        <input type="button" onclick="Palindrome(num.value)" value="CHECK"/>
+    </form>
+
+    <script>
+        function Palindrome(num){
+            var rev=0;
+            var temp=num;
+            while(temp>0){
+            rev=rev*10+temp%10;
+            temp=parseInt(temp/10);
+            }
+            console.log(rev);
+            
+            if(rev==num){
+                alert(num+" is palindrome number.");
+            }
+            else{
+                alert(num+" is not aa palindrome number.");
+            }
+        }
+    </script>
+</body>
+</html>

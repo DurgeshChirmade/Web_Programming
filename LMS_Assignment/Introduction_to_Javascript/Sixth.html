@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factorial Number</title>
+    
+</head>
+<body>
+    <h1>Factorial Program</h1>
+    <button type="submit" onclick="factFun(5)">See Fact</button>
+    <div id="result">...</div>
+    <script>
+        var fact=1
+        function factFun(num){
+            if(num<=1){
+               fact=1; 
+               return;
+            }
+            for(let i=num;i>=1;i--){
+                fact *=i;
+            }
+            // document.write("Fact of "+num+" is "+fact);
+            // alert("Fact of "+num+" is "+fact);
+            document.getElementById("result").innerHTML="Fact of "+num+" is "+fact;
+        }
+    </script>
+</body>
+</html>
