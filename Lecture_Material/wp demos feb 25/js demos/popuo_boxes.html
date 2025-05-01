@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        function f1() {
+            //informative
+            alert("this is info message");
+        }
+
+        function f2() {
+            //accepting small input
+            var age = prompt("Enter your age");
+            //age will be null - cancel button
+            alert("Age : "+age);
+        }
+
+        function f3(){
+            //closing some window
+            if(confirm("Do u want to confirm?"))
+                alert("confirmed")
+            else
+                alert("cancelled");
+        }
+    </script>
+</head>
+<body>
+    <button onclick="f1()">show alert</button>
+    <br/>
+    <button onclick="f2()"> Get Input </button>
+    <br/>
+    <button onclick="f3()"> Get Confirmation </button>
+</body>
+</html>

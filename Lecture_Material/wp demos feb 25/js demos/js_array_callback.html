@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        //using forEach
+        function myitr(v, i) {
+            document.write("<li>"+v+" is present at index "+i+"</li>");
+        }
+        var arr = [99,3,6,2,9,10,100];
+        document.write("<ul>");
+        //forEach - named function    
+        arr.forEach(myitr);
+        document.write("</ul>");
+        document.write("<br/>**********<br/>");
+        //forEach - anoymous function       
+        arr.forEach(function(v) {
+            document.write("<p>"+v+"</p>");
+        })
+        
+        arr.forEach(v=>document.write("<a href=#>"+v+"</a><br/>"));
+
+        //using sort
+        document.write("<br/>**********<br/>");
+        function compareFn(a,b) {
+            return a-b;
+        }
+        //arr.sort(compareFn);
+        /*arr.sort(function(a,b){
+            return b-a;
+        });*/
+        arr.sort((a,b)=>a-b);
+        document.write("<br/>"+arr.toString());
+
+        //using map
+        document.write("<br/>**********<br/>");
+        var squares = arr.map(v => v*v);
+        document.write("<br/>"+squares.toString());
+
+        //using reduce
+        document.write("<br/>**********<br/>");
+        arr.reduce()
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

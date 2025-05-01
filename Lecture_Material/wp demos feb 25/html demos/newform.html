@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <form>
+        Enter uid :
+        <input type="text" name="uid" required  size="8"
+        autofocus list="names"
+        value="bakul" pattern="^[a-z]{5}$"/> <br/>
+        Enter age : 
+        <input type="number" name="age" min="10" max="99" step="5" /> <br/>
+        Enter bdate :
+        <input type="date" name="bdate" min="2025-04-28"/> <br/>
+        Enter time :
+        <input type="time" name="time" /> <br/>
+        Enter color :
+        <input type="color" name="fvcolor" /> <br/>
+        Enter email :
+        <input type="email" name="email" /> <br/>
+ 
+        <input type="submit" value="SUBMIT" />
+    </form>
+    <datalist id="names">
+        <option>amit</option>
+        <option>bakul</option>
+        <option>snehal</option>
+        <option>vaibhav</option>
+        <option>dhanashree</option>
+        <option>pratik</option>
+        <option>sonali</option>
+        <option>pratiksha</option>
+    </datalist>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        function dyTable(num){
+            var str="";   //assignment
+            str+="<table border=1>";
+            for(i=1;i<=10;i++){
+                str+="<tr>";
+                str+="<td>";
+                str+=num+" * "+i+" = "+(num*i);    
+                str+="</td>";        
+                str+="</tr>";    
+            }    
+            str+="</table>"; 
+            console.log(str); 
+            document.getElementById("table").innerHTML=str;
+        }
+    </script>
+</head>
+<body>
+    <form>
+        Enter number :
+        <input type="text" name="num" />
+        <br/>
+        <!-- <button type="button" onclick="dyTable(num.value)">
+            Display Table</button>  -->
+        <input type="button" value="Display Table"  
+        onclick="dyTable(num.value)"/>   
+    </form>
+    <div id="table">
+        ....
+    </div>
+</body>
+</html>

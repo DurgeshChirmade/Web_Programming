@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        var n;
+        document.write("<br/> "+n);
+        n = "welcome";
+        document.write("<br/> "+typeof n);   //string
+        n = 56.4;
+        document.write("<br/> "+typeof n);   //number
+        n = false;
+        document.write("<br/> "+typeof n);   //boolean
+        n = {fname:"bakul", age:23};
+        document.write("<br/> "+typeof n);   //object
+        n = [45,23,78,12];
+        document.write("<br/> "+typeof n);     //object
+
+        var n = 56;   //redeclared
+        document.write("<br/> "+n);
+        //without var keyword - across the functions
+        x = 78;
+        document.write("<br/> "+x);
+
+        let msg;
+        document.write("<br/>"+msg);
+        /*for(let i=0;i<5;i++){
+
+        }*/
+        //let msg;  //redeclaration
+        const PI = 3.4;
+        //PI = 3;   //can not re-assign
+
+        //document.write("<br/> "+x);   //not defined
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

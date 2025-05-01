@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Using styles </title>
+    <link href="mystyle.css" rel="stylesheet" type="text/css" />
+    <style>
+        /*  group selection -  ,  */
+        h1,h3,h5{
+            text-align: center;
+        }
+        /* selecting element - basis of id - #   */
+        #mypara {
+            word-spacing: 20px;
+        }
+        /* selecting elements on basis of class value - .   */
+        /* generic class selector */
+        .content {
+            text-shadow: 2px 2px 2px blue;
+        }
+        /* specific class selector    */
+        h3.content {
+            border: 5px dashed red;
+        }
+        /* selection on the basis of attributes - value */
+        [type = "text"] {
+            background-color: red;
+        } 
+        [target = '_blank'] {
+            color: green;
+        }
+        
+
+
+
+        img {
+            border: 2px solid green; 
+        }
+        a{
+            color:brown;
+        }
+        ul {
+            list-style-type: square;
+        }
+        p{
+            margin-left: 50px;
+        }
+    </style>
+</head>
+<body>
+    <!-- HTML comment -->
+    <h1> Welcome to web programming </h1>
+    <h3 class="content"> Learning HTML </h3>
+    <h5> Applying styles </h5>
+    <p id="mypara" class="content" style="letter-spacing: 5px; text-decoration: overline;"> 
+        CSS helps in separation of content and look and feel 
+    </p>
+    <p> 3 types of style sheets </p>
+    <ul>
+        <li> External </li>
+        <li> Internal </li>
+        <li> Inline </li>
+    </ul>
+    <img src="../html demos/images/Jellyfish.jpg" width="100"
+     height="100" /> <br/>
+     <a href="#"> Click here </a>
+     <br/>
+     <input type="text" name="nm" />
+     <br/>
+     <br/>
+     <br/>
+     <br/>
+     <br/>
+     <br/>
+</body>
+</html>
