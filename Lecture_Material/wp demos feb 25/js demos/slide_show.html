@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+
+        var imgarr = ["images/Desert.jpeg","images/Hydrangeas.jpg","images/Jellyfish.jpg","images/Browser.jpg","images/Desktop.jpg","images/browesr.jpg"];
+        var idx = 0;
+        function nextImg() {
+            idx++;
+            if(idx == imgarr.length)
+                idx = 0;
+            document.getElementById("myimg").src = imgarr[idx];
+        }
+
+        function prevImg() {
+            idx--;
+            if(idx == -1)
+                idx = imgarr.length-1;
+            document.getElementById("myimg").src = imgarr[idx];
+        }
+
+    </script>
+</head>
+<body>
+    <img src="images/Desert.jpeg" width="200" height="200"
+      id="myimg" />
+    <br/>
+    <button onclick="prevImg()">Previous</button>
+    <button onclick="nextImg()">Next</button>
+ </body>
+</html>

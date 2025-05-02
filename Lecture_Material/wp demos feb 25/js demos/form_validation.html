@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        function validation() {
+            //data validation
+
+            //uid validation
+            //not valid - msg to the user, accept another data
+            //aceess uid value
+            //var uid = document.f1.uid.value;
+            var uid = document.getElementById("uid").value;
+            if(uid.length <= 6 || uid.length >= 12){
+                //alert("uid should be 6-12 characters");
+                document.getElementById("uiderror").innerHTML= "uid should be 6-12 characters";
+                document.getElementById("uid").value="";
+                document.getElementById("uid").focus();
+                return;
+            }
+            else {
+                document.getElementById("uiderror").innerHTML="";
+            }
+
+            //pwd validation
+
+
+
+            //gender validation
+
+
+
+            //data is valid
+            //submit the data
+            alert("data is getting submitted");
+            //document.f1.submit();
+            document.getElementById("f1").submit();
+        }
+
+        function checkUid() {
+            alert("validating uid");
+            var uid = document.getElementById("uid").value;
+            if(uid.length <= 6 || uid.length >= 12){
+                //alert("uid should be 6-12 characters");
+                document.getElementById("uiderror").innerHTML= "uid should be 6-12 characters";
+                document.getElementById("uid").value="";
+                //document.getElementById("uid").focus();
+                //return;
+            }
+        }
+    </script>
+</head>
+<body>
+    <form name="f1" id="f1">
+        Enter uid : 
+        <input type="text" name="uid" id="uid" />   <!-- onblur="checkUid()"/> -->
+        <span style="color: red;" id="uiderror">XXXX</span>
+        <br/>
+        Enter pwd :
+        <input type="password" name="pwd" />
+        <br/>
+        Select gender :
+        <input type="radio" name="gender" value="M" /> Male
+        <input type="radio" name="gender" value="F" /> Female
+        <br/>
+        <input type="button" value="Submit" 
+        onclick="validation()"/>
+
+    </form>
+</body>
+</html>

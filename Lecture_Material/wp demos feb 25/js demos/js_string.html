@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        var str = "welcome";
+        document.write("<br/>"+str.length);
+        for(i=0;i<str.length;i++){
+            document.write("<br/>"+str.charAt(i)+" : "+str.charCodeAt(i))
+        }
+        //extracting substring
+        //startindex < endindex
+        document.write("<br/>"+str.slice(2,5));
+        document.write("<br/>"+str.substring(2,5));
+        document.write("<br/>"+str.slice(-6,-2));  //try with start > end
+        document.write("<br/>"+str.substring(3));
+        document.write("<br/>"+str.substr(1,4));
+
+        //searching
+        document.write("<br/>"+str.indexOf("e"));
+        document.write("<br/>"+str.lastIndexOf("e"));
+        document.write("<br/>"+str.lastIndexOf("come"));
+        document.write("<br/>"+str.lastIndexOf("z"));
+        //str.search()   //reg exp pattern
+
+        str = "welcome to knowit";
+        //var words = str.split("")   //array of substring
+        var words = str.split(" ")
+        document.write("<br/>"+words.toString());
+
+        var arr = str.split("o");
+        document.write("<br/>"+arr.toString());
+
+        document.write("<br/><br/> <br/> <br/> <br/>");
+
+        function extract(mail) {
+            var atindex = mail.indexOf("@");
+            var uname = mail.substring(0, atindex);
+            var domain = mail.substring(atindex+1);
+            var dotindex = domain.lastIndexOf(".");
+            var suffix = domain.substring(dotindex+1);
+            var str="";
+            str+="<p> user name : "+uname+"</p>";
+            str+="<p> Domain name : "+domain+"</p>";
+            str+="<p> Suffix : "+suffix+"</p>";
+            document.getElementById("info").innerHTML=str;
+        }
+    </script>
+</head>
+<body>
+    
+    <form> 
+        Enter email :
+        <input type="email" name="email" />
+        <input type="button" value="Extract" 
+        onclick="extract(email.value)" />
+    </form>
+    <div id="info">
+
+    </div>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    
+</body>
+</html>
