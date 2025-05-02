@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Four JavaScript Page</title>
+    <script>
+        var img=["../images/Desert.jpeg","../images/browesr.jpg","../images/Worddocument.jpg","../images/Folder.jpg","../images/Desktop.jpg","../images/Browser.jpg","../images/Computer.jpg","../images/Hydrangeas.jpg","../images/Jellyfish.jpg"];
+        var idx=0;
+        function prevImg(){
+            idx--;
+            if(idx==-1){
+                idx=img.length-1;
+            }
+            document.getElementById("myimg").src=img[idx];
+        }
+        function nextImg(){
+            idx++;
+            if(idx==img.length){
+                idx=0;
+            }
+            document.getElementById("myimg").src=img[idx];
+        }
+    </script>
+</head>
+<body>
+    <img src="../images/Desert.jpeg" width="300" height="300" id="myimg" alt="Sliding Image Page" /><br/><br/>
+    <button type="button" onclick="prevImg()">Previous</button>
+    <button type="next" onclick="nextImg()">Next</button>
+</body>
+</html>

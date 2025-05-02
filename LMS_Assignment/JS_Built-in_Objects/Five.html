@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Five JavaScript Page</title>
+</head>
+
+<body>
+    <img src="../images/Desert.jpeg" width="300" height="300" id="myimg" alt="Sliding Image Page" /><br /><br />
+    <script>
+        var img = ["../images/Desert.jpeg", "../images/browesr.jpg", "../images/Worddocument.jpg", "../images/Folder.jpg", "../images/Desktop.jpg", "../images/Browser.jpg", "../images/Computer.jpg", "../images/Hydrangeas.jpg", "../images/Jellyfish.jpg"];
+        var idx = 0;
+        setInterval(() => {
+            idx++;
+            if (idx == img.length) {
+                idx = 0;
+            }
+            console.log(img[idx])
+            document.getElementById("myimg").src = img[idx];
+        }, 1000)
+    </script>
+</body>
+
+</html>

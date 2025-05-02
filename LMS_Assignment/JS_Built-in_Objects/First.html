@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First JavaScript Builtin Page</title>
+    <script>
+        function getLength() {
+            // var s = document.querySelector('input[name="str"]').value;
+            var s = document.f1.str.value;
+            console.log(s);
+            document.writeln("<h1>" + "String Length : " + s.length + "</h1>");
+            document.writeln("<h1>" + "*************************************************" + "</h1><br/><hr/>");
+
+            var u = s.toUpperCase();
+            var l = s.toLowerCase();
+            document.writeln("<h1>" + "String Upper Case : " + u + " <br/>" + "String Lower Case : " + l + "</h1>");
+            document.writeln("<h1>" + "*************************************************" + "</h1><br/><hr/>");
+
+            if ((s.indexOf('w'))) {
+                document.writeln("<h1>" + "W is found at " + s.indexOf('w') + " from starting." + "<br/>" + "</h1>");
+                document.writeln("<h1>" + "*************************************************" + "</h1><br/><hr/>");
+            }
+            else {
+                document.writeln("<h1>" + "W is not found at from starting." + "<br/>" + "</h1>");
+                document.writeln("<h1>" + "*************************************************" + "</h1><br/><hr/>");
+            }
+
+            if ((s.lastIndexOf('w'))) {
+                document.writeln("<h1>" + "W is found at " + s.lastIndexOf('w') + " from last." + "<br/>" + "</h1>");
+                document.writeln("<h1>" + "*************************************************" + "</h1><br/><hr/>");
+            }
+            else {
+                document.writeln("<h1>" + "W is not found at from last." + "<br/>" + "</h1>");
+                document.writeln("<h1>" + "*************************************************" + "</h1><br/><hr/>");
+            }
+
+            let index = s.charAt(4);
+            let asc = s.charCodeAt(4);
+
+            document.writeln("<h1>" + "Char : " + index + "<br/>" + "Ascii Value : " + asc + "</h1>");
+            document.writeln("<h1>" + "*************************************************" + "</h1><br/><hr/>");
+
+        }
+
+        function strConcat() {
+            var s1 = document.f2.str1.value;
+            var s2 = document.f2.str2.value;
+
+            var s3 = s1.concat(s2);
+            document.writeln("<h1>" + "concat string : " + s3 + "</h1>");
+            document.writeln("<h1>" + "*************************************************" + "</h1><br/><hr/>");
+
+            var str4="India is my country I love my india";
+            document.writeln("<h1>" + "split words : " + str4.split(" ") + "</h1><br/>");
+        }
+    </script>
+</head>
+
+<body>
+    <form name="f1">
+        Enter your string : <input type="text" name="str" /><br /><br />
+        <input type="button" onclick="getLength()" value="Send" />
+    </form>
+    <hr />
+    <form name="f2">
+        Enter your string1 : <input type="text" name="str1" /><br /><br />
+        Enter your string2 : <input type="text" name="str2" /><br /><br />
+        <input type="button" onclick="strConcat()" value="Concat" />
+    </form>
+</body>
+
+</html>

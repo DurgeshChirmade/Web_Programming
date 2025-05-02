@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Second JavaScript Builtin Page</title>
+    <script>
+        function getInfo(){
+            var dat=document.f1.dt.value;
+            const d=new Date(dat);
+            
+            console.log(dat);
+            document.writeln("<h1>" + "day : " + d.getDate()+"<br/> Month : "+d.getMonth()+" <br/> Year : "+d.getFullYear() + "</h1>");
+            document.writeln("<h1>" + "*************************************************" + "</h1><br/><hr/>");
+
+            const now=new Date();
+            console.log(now);
+            const s=now-d;
+            console.log(s);
+            const diff=new Date(s);
+            console.log(diff);
+            console.log(now.getFullYear()-d.getFullYear());
+            document.writeln("<h1>"+"Age : "+Number(now.getFullYear()-d.getFullYear())+"</h1>")
+
+            const days = Math.floor(s / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((s % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((s % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((s % (1000 * 60)) / 1000);
+
+            document.write("<p>Difference: " + days + " days " + hours + " hours " + minutes + " minutes " + seconds + " seconds</p>");
+
+             // Calculate years, months, and days
+             let years = now.getFullYear() - d.getFullYear();
+            let months = now.getMonth() - d.getMonth();
+            let days_remaining = now.getDate() - d.getDate();
+
+            // Adjust for negative months and days
+            if (months < 0 || (months === 0 && days_remaining < 0)) {
+                years--;
+                months += 12;
+            }
+            if (days_remaining < 0) {
+                const prevMonth = new Date(now.getFullYear(), now.getMonth() - 1, d.getDate());
+                const diff = now.getTime() - prevMonth.getTime();
+                days_remaining = Math.floor(diff / (1000 * 60 * 60 * 24));
+                months--;
+                if(months<0){
+                  months = 11;
+                }
+            }
+            document.writeln("<h1>" + "Date of Birth : " + d.getDate() + "/" + (d.getMonth() + 1) + "/" + d.getFullYear() + "</h1>");
+            document.writeln("<h1>" + "*************************************************" + "</h1><br/><hr/>");
+            document.write("<p>Age: " + years + " years, " + months + " months, " + days_remaining + " days</p>");
+            document.write("<p>Time Difference: " + days + " days " + hours + " hours " + minutes + " minutes " + seconds + " seconds</p>");
+
+        }
+    </script>
+</head>
+<body>
+    <form name="f1">
+        Select Date of Birth : <input type="date" name="dt" /><br/><br/>
+        <button type="button" onclick="getInfo()">GetResult</button>
+    </form>
+</body>
+</html>
