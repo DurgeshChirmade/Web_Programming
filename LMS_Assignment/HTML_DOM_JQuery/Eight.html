@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eight JQuery Page</title>
+    <script src="../jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+    <div>
+        <ul id="ull">
+            <li>First LIST</li>
+            <li>Second LIST</li>
+            <li>Third LIST</li>
+            <li>Four LIST</li>
+        </ul>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $('li').dblclick(function () {
+                $(this).parent().attr("type", "square").css("color","greenyellow");
+            })
+        })
+    </script>
+</body>
+
+</html>

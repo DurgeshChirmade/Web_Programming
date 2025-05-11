@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Four HTML DOM Page</title>
+</head>
+<body>
+    <h1 id="hel">Hello World</h1>
+
+    <script>
+        var he=document.getElementById("hel");
+        var hl=he.innerHTML;
+        he.addEventListener("mouseover",function(){
+            he.style.textShadow="2px 2px #ff0000";
+        });
+        he.addEventListener("mouseout",function(){
+            he.style.textShadow="";
+            he.innerHTML=hl;
+        });
+    </script>
+</body>
+</html>

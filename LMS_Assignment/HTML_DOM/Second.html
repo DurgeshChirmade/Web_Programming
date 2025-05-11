@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Page</title>
+</head>
+<body>
+    <form>
+        <input type="password" name="pass" id="pwd" placeholder="Enter password"/>
+        <img id="chb" onclick="show(this)" src="eye.png"/>
+    </form>
+    <script>
+        function show(button){
+            var pas=document.getElementById("pwd");
+            if(pas.type=='password'){
+                button.src="hide.png"
+                pas.type="text";
+    
+            }
+            else{
+                button.src="eye.png";
+                pas.type="password";
+            }
+        }
+    </script>
+</body>
+</html>

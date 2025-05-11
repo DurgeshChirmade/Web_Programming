@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Regular Expression</title>
+</head>
+
+<body>
+    <form>
+        First Name : <input type="text" name="fn" id="fname" placeholder="First Name" /><br /><br />
+        Full Name : <input type="text" name="fl" id="flname" placeholder="Full Name"><br /><br />
+        Mobile Number : <input type="text" name="mn" id="mnum" placeholder="Mobile Number"><br /><br />
+        Email Id : <input type="text" name="em" id="email" placeholder="Email Id"><br /><br />
+        Course : <input type="text" name="cu" id="cur" placeholder="Course Name"><br /><br />
+        Aadhar Number : <input type="text" name="an" id="aan" placeholder="Aadhar Number"><br /><br />
+        Pan Number : <input type="text" name="anp" id="pan" placeholder="Pan Card Number"><br /><br />
+        <input type="button" onclick="check()" value="check">
+    </form>
+    <script>
+        function check() {
+            /*
+            var str=document.getElementById("fname").value;
+            var pattern=/^[A-Z]{1}[a-z]/;
+            document.writeln(pattern.test(str));
+            */
+
+            /*
+            let str1 = document.getElementById('flname').value
+            console.log(str1);
+ 
+            var pattern1=/[A-Za-z] [A-Za-z]/;
+            document.writeln(pattern1.test(str1));
+            */
+
+            /*
+            let str=document.getElementById("mnum").value
+            console.log(str)
+ 
+            var pattern=/^[0-9]{10}$/;
+            document.writeln(pattern.test(str))
+            */
+
+            /*
+            let str=document.getElementById("mnum").value
+            console.log(str)
+ 
+            var pattern=/^[0-9]{3}-[0-9]{10}$/;
+            document.writeln(pattern.test(str))
+            */
+
+            /*
+            let str = document.getElementById("email").value
+            console.log(str)
+
+            var pattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            document.writeln(pattern.test(str))
+            */
+
+            /*
+            let str = document.getElementById("cur").value
+            console.log(str)
+
+            var pattern = /^PG\-[A-Za-z]{3,8}$/;
+            document.writeln(pattern.test(str))
+            */
+
+            /*
+            let str = document.getElementById("aan").value
+            console.log(str)
+
+            var pattern = /^\d{4} \d{4} \d{4}$/;
+            document.writeln(pattern.test(str))
+            */
+
+            let str = document.getElementById("pan").value
+            console.log(str)
+
+            var pattern = /^[A-Z]{5}\d{4}[A-Z]{1}$/;
+            document.writeln(pattern.test(str))            
+
+        }
+    </script>
+</body>
+
+</html>

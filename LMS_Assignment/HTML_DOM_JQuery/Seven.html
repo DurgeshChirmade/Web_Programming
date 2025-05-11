@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seven JQuery Page</title>
+    <script src="../jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+    <div style="background-color: yellowgreen;height: fit-content;width: fit-content;">
+        <h1>This is first h1 tag</h1>
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis exercitationem dolore ad? Nesciunt
+            accusantium distinctio beatae, ab nisi odit ipsa ex alias dicta facilis officiis. Culpa molestias veritatis,
+            iste natus cupiditate animi sapiente a necessitatibus consectetur neque eius tempore esse dignissimos
+            placeat, eaque quo, repellendus ipsa quod porro iusto autem!
+        </p>
+        <h3>This is second div</h3>
+    </div>
+
+    <button id="btn">change color</button>
+    <script>
+        $(document).ready(function(){
+            $('#btn').click(function(){
+                $('body').children().children('h1').css("border","2px dashed red");
+                $('body').children().children('p').css("border","2px dotted red");
+                $('body').children().children('h3').css("border","2px solid black");
+            })
+        })
+    </script>
+</body>
+
+</html>

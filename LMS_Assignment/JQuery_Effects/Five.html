@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Five JQuery Page</title>
+    <script src="../jquery-3.7.1.min.js"></script>
+    <script src="../jquery-ui.min.js"></script>
+</head>
+<body>
+    <div id="dbd" style="background-color: rgba(210, 105, 30, 0.463);width: 300px;height: 200px;"></div><br>
+    <div id="upd" style="background-color: bisque; width: 300px;height: 100px; text-align: center;">
+        <button type="button" id="b1">Slide Panel up</button>
+    </div>
+    <br>
+    <div id="dwnd" style="background-color: bisque; width: 300px;height: 100px; text-align: center;">
+        <button type="button" id="b2">Slide Panel down</button>
+    </div>
+    <script>
+        $(document).ready(function(){
+            $('#b1').click(function(){
+                $('#dbd').slideUp(4000);
+            })
+            $('#b2').click(function(){
+                $('#dbd').slideDown(4000);
+            })
+        })
+    </script>
+</body>
+</html>

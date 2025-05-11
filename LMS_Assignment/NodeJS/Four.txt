@@ -1,0 +1,5 @@
+node
+Welcome to Node.js v22.15.0.
+Type ".help" for more information.
+> console.log("Hello from REPL Node JS");
+Hello from REPL Node JS

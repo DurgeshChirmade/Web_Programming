@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First DOM Manu Page</title>
+</head>
+<body>
+    <ul id="ull">
+        <li>browesr</li>
+        <li>Browser</li>
+        <li>Computer</li>
+        <!-- <li>Desert</li> -->
+        <li>Desktop</li>
+        <li>Folder</li>
+        <li>Hydrangeas</li>
+        <li>Jellyfish</li>
+        <li>Worddocument</li>
+    </ul>
+    <button onclick="changeimg()">Change</button>
+    <script>
+        function changeimg(){
+            var l=document.getElementById('ull');
+            console.log("ul",l);
+            var lis=l.getElementsByTagName("li");
+            console.log(lis);
+            //var img=["../images/Desert.jpeg","../images/browesr.jpg","../images/Worddocument.jpg","../images/Folder.jpg","../images/Desktop.jpg","../images/Browser.jpg","../images/Computer.jpg","../images/Hydrangeas.jpg","../images/Jellyfish.jpg"];
+
+            for(i=0;i<lis.length;i++){
+                var imgs=document.createElement("img");
+                var s="../images/"+lis[i].innerText.trim()+".jpg";
+                console.log(s);
+                imgs.setAttribute("src",s);
+                imgs.setAttribute("width",'200');
+                imgs.setAttribute("height",'200');
+                lis[i].replaceChild(imgs,lis[i].firstChild);
+
+                console.log("here",imgs)
+            }
+        }
+    </script>
+</body>
+</html>

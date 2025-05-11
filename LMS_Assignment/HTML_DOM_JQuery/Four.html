@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Four JQuery Page</title>
+    <script src="../jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+    <h1>Click on the square below : </h1>
+    <div id="dv" style="background-color: blue;width: 100px;height: 100px;text-align: center;align-content: center;">
+        <h3><p>This is blue color</p></h3>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $('#dv').click(function () {
+                // console.log($('#dv p').text());
+                console.log($('#dv h3 p').text())
+                $('#dv').before("<h1>" + $('#dv h3 p').text() + "</h1>")
+            })
+        })
+    </script>
+</body>
+
+</html>

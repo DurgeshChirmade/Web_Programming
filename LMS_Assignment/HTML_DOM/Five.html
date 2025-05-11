@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Five HTML DOM Page</title>
+</head>
+<body>
+    <button onclick="changecolor(this.innerText)">Green</button>
+    <button onclick="changecolor(this.innerText)">Red</button>
+    <button onclick="changecolor(this.innerText)">Blue</button>
+
+    <script>
+        function changecolor(color){
+            document.body.style.backgroundColor=color;
+        }
+    </script>
+</body>
+</html>

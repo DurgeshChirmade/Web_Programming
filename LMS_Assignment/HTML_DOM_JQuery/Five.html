@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Five JQuery Page</title>
+    <script src="../jquery-3.7.1.min.js"></script>
+    <style>
+        .d1{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .details {
+            padding: 10px;
+            background-color: #f0f0f0;
+            border-top: 1px solid #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="background-color: gainsboro;">
+        <div class="d1">
+        <h1>Question One Sample Text</h1>
+        <button class="toggle-btn" style="height: 30px;width: 30px;">v</button>
+        </div>
+        <div class="details" hidden>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate, maiores suscipit architecto nesciunt
+            optio, aut ducimus error esse consequatur nemo earum eligendi, ipsam natus cumque cum aperiam asperiores
+            repellendus veritatis.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Et laboriosam, officia debitis autem quam nostrum
+            tempora iusto ab aliquam deleniti aspernatur iure, modi ad rem voluptate accusamus eaque! Fugiat, rerum!
+        </div>
+    </div>
+    <hr>
+    <div style="background-color: gainsboro;">
+        <div class="d1">
+        <h1>This is Question Two</h1>
+        <button class="toggle-btn" style="height: 30px;width: 30px;">v</button>
+        </div>
+        <div class="details" hidden>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate, maiores suscipit architecto nesciunt
+            optio, aut ducimus error esse consequatur nemo earum eligendi, ipsam natus cumque cum aperiam asperiores
+            repellendus veritatis.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Et laboriosam, officia debitis autem quam nostrum
+            tempora iusto ab aliquam deleniti aspernatur iure, modi ad rem voluptate accusamus eaque! Fugiat, rerum!
+        </div>
+    </div>
+    <hr>
+    <div style="background-color: gainsboro;">
+        <div class="d1">
+        <h1>Another Question here</h1>
+        <button class="toggle-btn" style="height: 30px;width: 30px;">v</button>
+        </div>
+        <div class="details" hidden>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate, maiores suscipit architecto nesciunt
+            optio, aut ducimus error esse consequatur nemo earum eligendi, ipsam natus cumque cum aperiam asperiores
+            repellendus veritatis.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Et laboriosam, officia debitis autem quam nostrum
+            tempora iusto ab aliquam deleniti aspernatur iure, modi ad rem voluptate accusamus eaque! Fugiat, rerum!
+        </div>
+    </div>
+    <hr>
+    <div style="background-color: gainsboro;">
+        <div class="d1">
+        <h1>sample heading</h1>
+        <button class="toggle-btn" style="height: 30px;width: 30px;">v</button>
+        </div>
+        <div class="details" hidden>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate, maiores suscipit architecto nesciunt
+            optio, aut ducimus error esse consequatur nemo earum eligendi, ipsam natus cumque cum aperiam asperiores
+            repellendus veritatis.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Et laboriosam, officia debitis autem quam nostrum
+            tempora iusto ab aliquam deleniti aspernatur iure, modi ad rem voluptate accusamus eaque! Fugiat, rerum!
+        </div>
+    </div>
+    <hr>
+    <div style="background-color: gainsboro;">
+        <div class="d1">
+        <h1>Sample Question heading</h1>
+        <button class="toggle-btn" style="height: 30px;width: 30px;">v</button>
+        </div>
+        <div class="details" hidden>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate, maiores suscipit architecto nesciunt
+            optio, aut ducimus error esse consequatur nemo earum eligendi, ipsam natus cumque cum aperiam asperiores
+            repellendus veritatis.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Et laboriosam, officia debitis autem quam nostrum
+            tempora iusto ab aliquam deleniti aspernatur iure, modi ad rem voluptate accusamus eaque! Fugiat, rerum!
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $('.toggle-btn').click(function () {
+                const button = $(this);
+                const detailsDiv = button.parent().next('.details');
+
+                detailsDiv.slideToggle(3000, function () {
+                    if (detailsDiv.is(':visible')) {
+                        button.text('^');
+                    } else {
+                        button.text('v');
+                    }
+                });
+            });
+        })
+    </script>
+</body>
+
+</html>

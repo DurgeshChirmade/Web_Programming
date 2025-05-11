@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Four HTML DOM Page</title>
+</head>
+
+<body>
+    <p>This is first paragraph tag</p>
+    <p>This is second paragraph tag</p>
+    <p>This is third paragraph tag</p>
+    <p>This is four paragraph tag</p>
+    <p>This is five paragraph tag</p>
+    <button type="button" onclick="tag()">Show</button><br /><br />
+    <div id="ptag"></div>
+    <br><br>
+    <h1>This is first heading tag</h1><br>
+    <h1>This is second heading tag</h1><br>
+    <h1>This is third heading tag</h1><br>
+    <h1>This is four heading tag</h1><br>
+    <button type="button" onclick="hdea()">change color</button><br /><br />
+    <input type="text" placeholder="Enter your text" /><br>
+    <input type="text" placeholder="Enter your text"><br>
+    <input type="text" placeholder="Enter your text"><br>
+    <input type="text" placeholder="Enter your text"><br>
+    <button type="button" onclick="inp()">change text input color</button><br /><br />
+    <script>
+
+        function tag() {
+            var t = document.getElementsByTagName("p");
+            var s = "<table border=1 style=border-collapse:collapse>";
+            for (i = 0; i < t.length; i++) {
+                s += "<tr>";
+                s += "<td>" + i + "</td>";
+                s += "<td>" + t[i].textContent + "</td>";
+                s += "</tr>";
+            }
+            s += "</table>";
+
+            document.getElementById("ptag").innerHTML = s;
+        }
+
+        function hdea() {
+            var h = document.getElementsByTagName("h1");
+            for (i = 0; i < h.length; i++) {
+                h[i].style.color = "green";
+            }
+        }
+
+        function inp(){
+            var ip=document.getElementsByTagName("input");
+            for(i=0;i<ip.length;i++){
+                ip[i].style.backgroundColor="red";
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>

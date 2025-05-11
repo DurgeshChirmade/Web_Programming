@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON First</title>
+</head>
+
+<body>
+    <button type="button" onclick="show()">see string</button>
+
+    <script>
+        var jsr = '{"empid":101,"name":"AAA","salary":45000,"deptno":10,"isManager":true,"contactnumbers":[12345678,19345678,234566778]}';
+        var jsn = JSON.parse(jsr);
+
+        function show() {
+            document.writeln("<br>" + "empid : " + jsn.empid + "<br>");
+            document.writeln("<br>" + "name : " + jsn.name + "<br>");
+            document.writeln("<br>" + "salary : " + jsn.salary + "<br>");
+            document.writeln("<br>" + "deptno : " + jsn.deptno + "<br>");
+            document.writeln("<br>" + "isManager : " + jsn.isManager + "<br>");
+            // for (i = 0; i < contactnumbers.length; i++) {
+            //     console.log(i)
+                document.writeln("<br>" + "contactnumber : " + jsn.contactnumbers.toString() + "<br>");
+            // }
+        }
+    </script>
+</body>
+
+</html>

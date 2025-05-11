@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First AJAX Page</title>
+    <script src="jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <form action="">
+        <label for="eid">Enter empid</label>
+        <input type="text" id="eid" name="eid" placeholder="Enter empid" />
+        <button type="button" id="btn" value="check" onclick="">check</button>
+    </form>
+    <br/>
+    <div id="emps">...</div>
+
+    <script>
+        $(document).ready(()=>{
+            alert("doc already.");
+            $("#btn").click(()=>{
+                console.log($("#eid").val());
+                var eid=$("#eid").val();
+                var url="http://localhost:9000/getEmps?empid="+parseInt(eid);
+                alert(url);
+                $.get(url,(data,status)=>{
+                    if(status=="success"){
+                        console.log(data);
+                        $("#emps").html(data);
+                    }
+                })
+            })
+        })
+    </script>
+</body>
+</html>

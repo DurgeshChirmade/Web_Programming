@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Functions Page</title>
+    <script src="../jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <img src="../images/Desert.jpeg" alt="new image" width="200" height="200"><br><br>
+    <button type="button" id="b1">hide</button>
+    <button type="button" id="b2">show</button>
+    <button type="button" id="b3">toggle</button>
+    <script>
+        $(document).ready(function(){
+            $("#b1").click(function(){
+                $('img').hide(4000);
+            });
+            $("#b2").click(function(){
+                $('img').show(4000);
+            });
+            $("#b3").click(function(){
+                $('img').toggle(4000);
+            });
+        });
+    </script>
+</body>
+</html>

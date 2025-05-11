@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Third JQuery Page</title>
+    <script src="../jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+    <div>
+        <div class="d1">
+            <img src="../images/Desert.jpeg" alt="desert image" width="200" height="200">
+            <p><a class="open" href="#"> Open Details </a></p>
+        </div>
+        <div class="details" style="display: none;">
+            <p> Memeory : 8GB</p>
+            <p> Screen size : 5.6 inches</p>
+            <p> Front camera : 8 Mega pixels</p>
+            <p> Back camera : 6 Mega Pixels</p>
+            <p> Android : 6 </p>
+            <a class="close" href="#"> Close Details </a>
+        </div>
+    </div>
+    <br>
+    <div>
+        <div class="d1">
+            <img src="../images/Desert.jpeg" alt="desert image" width="200" height="200">
+            <p><a class="open" href="#"> Open Details </a></p>
+        </div>
+        <div class="details" style="display: none;">
+            <p> Memeory : 8GB</p>
+            <p> Screen size : 5.6 inches</p>
+            <p> Front camera : 8 Mega pixels</p>
+            <p> Back camera : 6 Mega Pixels</p>
+            <p> Android : 6 </p>
+            <a class="close" href="#"> Close Details </a>
+        </div>
+    </div>
+    <br>
+    <div>
+        <div class="d1">
+            <img src="../images/Desert.jpeg" alt="desert image" width="200" height="200">
+            <p><a class="open" href="#"> Open Details </a></p>
+        </div>
+        <div class="details" style="display: none;">
+            <p> Memeory : 8GB</p>
+            <p> Screen size : 5.6 inches</p>
+            <p> Front camera : 8 Mega pixels</p>
+            <p> Back camera : 6 Mega Pixels</p>
+            <p> Android : 6 </p>
+            <a class="close" href="#"> Close Details </a>
+        </div>
+    </div>
+    <br>
+    <div>
+        <div class="d1">
+            <img src="../images/Desert.jpeg" alt="desert image" width="200" height="200">
+            <p><a class="open" href="#"> Open Details </a></p>
+        </div>
+        <div class="details" style="display: none;">
+            <p> Memeory : 8GB</p>
+            <p> Screen size : 5.6 inches</p>
+            <p> Front camera : 8 Mega pixels</p>
+            <p> Back camera : 6 Mega Pixels</p>
+            <p> Android : 6 </p>
+            <a class="close" href="#"> Close Details </a>
+        </div>
+    </div>
+    <br>
+    <script>
+        $(document).ready(function () {
+            $('a.open').click(function () {
+                $('.details').slideDown(3000);
+                $('a.open').hide();
+            })
+            $("a.close").click(function () {
+                $('a.open').show();
+                $('.details').slideUp(3000);
+            })
+        })
+    </script>
+</body>
+
+</html>

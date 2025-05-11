@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Four JQuery Page</title>
+    <script src="../jquery-3.7.1.min.js"></script>
+    <script src="../jquery-ui.min.js"></script>
+</head>
+
+<body>
+    <div style="width: 100px;height: 100px;font-size: 20px;background-color: rgb(241, 128, 7);">
+        Hello World
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $('div').mouseover(function () {
+                /*
+                $(this).animate({width:'+=200px',height:'+=200px',fontSize:'+=20px',backgroundColor:'red'});
+                $(this).animate({width:'+=200px',height:'+=200px',fontSize:'+=20px',backgroundColor:'green'});
+                $(this).animate({width:'-=200px',height:'-=200px',fontSize:'-=20px',backgroundColor:'orange'});
+                $(this).animate({width:'-=200px',height:'-=200px',fontSize:'-=20px',backgroundColor:'yellowgreen'});
+                */
+                $(this).animate({ width: '+=100px', height: '+=100px', fontSize: '+=20px', backgroundColor: 'red' });
+                $(this).animate({ width: '+=100px', height: '+=100px', fontSize: '+=20px', backgroundColor: 'blue' });
+                $(this).animate({ width: '-=100px', height: '-=100px', fontSize: '-=20px', backgroundColor: 'green' });
+                $(this).animate({ width: '-=100px', height: '-=100px', fontSize: '-=20px', backgroundColor: 'aqua' },);
+            })
+
+            $('div').mouseout(function(){
+                $(this).stop();
+            })
+        });
+    </script>
+</body>
+
+</html>

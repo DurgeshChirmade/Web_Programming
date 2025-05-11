@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Second JQuery Page</title>
+    <script src="../jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <div>
+        <p>This is first paragraph tag</p>
+        <p>This is second paragraph tag</p>
+        <p>This is third paragraph tag</p>
+        <p>This is four paragraph tag</p>
+    </div>
+    <button id="red">remove div</button><br><br>
+    <button id="redc">remove div childs</button>
+
+    <script>
+        $(document).ready(function(){
+            $('#red').click(function(){
+                $('div').remove();
+            })
+
+            $('#redc').click(function(){
+                $('div').empty();
+            })
+        })
+    </script>
+</body>
+</html>

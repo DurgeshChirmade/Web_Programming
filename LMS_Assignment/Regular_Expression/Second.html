@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Second Regex Page</title>
+</head>
+
+<body>
+    <form>
+        <input type="text" maxlength="30" size="20" name="uid" id="lid" placeholder="Enter login id"><div id="errname">...</div><br><br>
+        <input type="password" maxlength="30" size="20" name="pwd" id="pwd" placeholder="Enter login id"><div id="errpass">...</div><br>
+        <button type="button" onclick="validate()">submit</button>
+        <button type="reset">clear</button>
+    </form>
+    <script>
+        function validate() {
+            var uid = document.getElementById('lid').value;
+            var pwd = document.getElementById('pwd').value;
+            if (uid == "" || uid == null) {
+                document.getElementById('errname').innerHTML = "Username required";
+                return;
+            }
+            else if (uid.length < 5 || uid.length > 15) {
+                document.getElementById('errname').innerHTML = "Username should be in the range 5-15";
+                return;
+            }
+            else {
+                document.getElementById('errname').innerHTML = "";
+            }
+
+            if (pwd == "" || pwd == null) {
+                document.getElementById('errpass').innerHTML = "password required";
+                return;
+            }
+            else if (pwd.length < 8 || pwd.length > 15) {
+                document.getElementById('errpass').innerHTML = "password should be in the range 8-15";
+                return;
+            }
+            else {
+                document.getElementById('errpass').innerHTML = "";
+            }
+        }
+    </script>
+</body>
+
+</html>

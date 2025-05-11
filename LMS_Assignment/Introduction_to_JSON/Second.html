@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SECOND JSON PAGE</title>
+</head>
+
+<body onload="show()">
+    <div id="jsonTable"></div>
+
+    <script>
+
+        function show() {
+            var jsr = '[{"empid":101,"name":"AAA","salary":45000,"deptno":10,"isManager":true,"contactnumbers":[12345678,19345678,234566778]},{"empid":102,"name":"BBB","salary":65000,"deptno":20,"isManager":false,"contactnumbers":[12345678,19345678,234566778]},{"empid":103,"name":"CCC","salary":55000,"deptno":30,"isManager":true,"contactnumbers":[12345678,19345678,234566778]}]';
+            var jsn = JSON.parse(jsr);
+            var s = "<table border='1'>";
+            // Get the headers dynamically from the first object in the array
+            const headers = Object.keys(jsn[0]);
+
+            // Add table headers
+            s += "<tr>";
+            headers.forEach(header => {
+                s += `<th>${header}</th>`;
+            });
+            s += "</tr>";
+
+            // Loop through the JSON array to create table rows
+            jsn.forEach(item => {
+                s += "<tr>";
+                headers.forEach(header => {
+                    let value = item[header];
+                    if (Array.isArray(value)) {
+                        value = value.join(", ");
+                    }
+                    s += `<td>${value}</td>`;
+                });
+                s += "</tr>";
+            });
+            s += "</table>";
+
+            document.getElementById("jsonTable").innerHTML = s;
+        }
+    </script>
+</body>
+
+</html>
