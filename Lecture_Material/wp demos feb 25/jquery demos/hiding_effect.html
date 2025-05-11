@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            alert("doc ready");
+            $("#hide").click(function() {
+                //$("p").hide();
+                //$("p").hide(4000);
+                $("p").hide(4000, function() {
+                    alert("hiding complete")
+                });
+            })
+
+            $("#show").click(function() {
+                $("p").show("slow");
+            })
+
+            $("#toggle").click(function() {
+                $("p").toggle("slow");
+            })
+            
+        })
+    </script>
+</head>
+<body>
+    <p> this is simple paragraph </p>
+    <button id="hide">Hide Para</button>
+    <button id="show">Show Para</button>
+    <button id="toggle">Toggle Para</button>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <script>
+       function makeRequest() {
+           //async request
+           //1. create ajax object
+           ajax = createAjaxObject();
+           if(ajax)
+                alert("ajax created")
+            ajax.onreadystatechange = updatePage
+
+           //2. initialize the request
+           var eno = document.getElementById("empno").value;
+           var url = "http://localhost:9000/greet?empno="+eno;
+           alert(url);
+           ajax.open("GET" , url, true );
+
+           //3. send the request
+           ajax.send(""); 
+
+           //0, 1, 2, 3, 4
+           //updatePage - gets called for every state change
+           
+       }
+
+       function updatePage() {
+            alert(ajax.readyState)
+            if(ajax.readyState == 4) {
+                document.getElementById("greet").innerHTML = ajax.responseText;
+            }
+       }
+
+       function createAjaxObject() {
+           try {
+              //chrome family
+              var ajax = new XMLHttpRequest();
+              return ajax; 
+           }
+           catch(e) {
+                try {
+                    //MS browser
+                    var ajax = new ActiveXObject("Microsoft.XMLHTTP");
+                    return ajax;
+                }
+                catch(e) {
+                    alert("browser does not supprt ajax")
+                }
+           }
+       }
+   </script>
+</head>
+<body>
+    <form>
+        Enter empno :
+        <input type="number" name="empno" id="empno" />
+        <br/>
+        <input type="button" value="GREET" 
+          onclick="makeRequest()"  /> 
+    </form>
+    <br/>
+    <div id="greet"></div>
+</body>
+</html>

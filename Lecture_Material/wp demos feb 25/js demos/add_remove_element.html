@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        function addLink() {
+            /*var anode = document.createElement("a");
+            var txtnode = document.createTextNode("Click Me");
+            anode.appendChild(txtnode);
+            anode.setAttribute("href","dombyid.html");
+            document.body.appendChild(anode);
+            var btnnode = document.getElementById("b1");
+            //btnnode.disabled = true;
+            document.body.removeChild(btnnode);*/
+
+            var imgnode = document.createElement("img");
+            imgnode.setAttribute("src","images/Desert.jpeg");
+            imgnode.setAttribute("width","200");
+            imgnode.setAttribute("height","200");
+            var pnode = document.getElementsByTagName("p")[0];
+            document.body.replaceChild(imgnode, pnode); //new, old
+        }
+    </script>
+</head>
+<body>
+    <button  id="b1" onclick="addLink()">Add Link</button>
+    <p> this is simple para </p>
+</body>
+</html>

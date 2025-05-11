@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        function validate() {
+            var nm = document.f1.nm.value;
+            var nmpattern = /^[A-Z]{1}[a-z]{1,} [A-Z]{1}[a-z]{1,}$/
+            if(!nmpattern.test(nm)) {
+                document.getElementById("error").innerHTML+= "Invalid name <br/>"
+            }
+
+            var mailid = document.f1.email.value;
+            var emailpattern = /^[\w\.-]{8,12}@[a-z0-9]{5,20}\.com$/
+            if(!emailpattern.test(mailid)) {
+                document.getElementById("error").innerHTML+= "Invalid Emailid <br/>"
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <form name="f1">
+        Enter name : 
+        <input type="text" name="nm" />
+        <br/>
+        Enter email :
+        <input type="text" name="email" />
+        <br/>
+        Enter password :
+        <input type="text" name="pwd" />
+        <br/>
+        <input type="button" value="Register"
+        onclick="validate()" />
+        <span id="error"> </span>
+    </form>
+</body>
+</html>

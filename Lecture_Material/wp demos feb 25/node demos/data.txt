@@ -1,0 +1,3 @@
+this is simple content
+generated for fs module
+to understand for read and write operation

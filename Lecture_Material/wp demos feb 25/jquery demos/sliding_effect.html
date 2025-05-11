@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            alert("doc ready");
+            $("a.open").click(function() {
+                //accessing parent, child
+                //$(".details").slideDown(3000);
+                $(this).parent().parent().next().slideDown(3000);
+            })
+            $("a.close").click(function() {
+                //$(".details").slideUp(3000);
+                $(this).parent().slideUp(2000);
+            })            
+        })
+    </script>
+</head>
+<body>
+    <div>
+        <div class="summary">
+            <img src="images/Desert.jpeg" width="50" height="50" />
+            <br/>
+            <p> Model : Samasung Galaxy</p>
+            <p> Product price : Rs 4000</p>
+            <p> <a class="open" href="#"> Open details </a> </p>
+        </div>
+        <div class="details" style="display:none">
+            <p> Memeory : 8GB</p>
+            <p> Screen size : 5.6 inches</p>
+            <p> Front camera : 8 Mega pixels</p>
+            <p> Back camera : 6 Mega Pixels</p>
+            <p> Android : 6 </p>
+            <a class="close" href="#"> Close details </a>
+        </div>
+    </div>
+    
+    <div>
+        <div class="summary">
+            <img src="images/Desert.jpeg" width="50" height="50" />
+            <br/>
+            <p> Model : Samasung Galaxy</p>
+            <p> Product price : Rs 4000</p>
+            <p> <a class="open" href="#"> Open details </a> </p>
+        </div>
+        <div class="details" style="display:none">
+            <p> Memeory : 8GB</p>
+            <p> Screen size : 5.6 inches</p>
+            <p> Front camera : 8 Mega pixels</p>
+            <p> Back camera : 6 Mega Pixels</p>
+            <p> Android : 6 </p>
+            <a class="close" href="#"> Close details </a>
+        </div>
+    </div>
+    <div>
+        <div class="summary">
+            <img src="images/Desert.jpeg" width="50" height="50" />
+            <br/>
+            <p> Model : Samasung Galaxy</p>
+            <p> Product price : Rs 4000</p>
+            <p> <a class="open" href="#"> Open details </a></p>
+        </div>
+        <div class="details" style="display:none">
+            <p> Memeory : 8GB</p>
+            <p> Screen size : 5.6 inches</p>
+            <p> Front camera : 8 Mega pixels</p>
+            <p> Back camera : 6 Mega Pixels</p>
+            <p> Android : 6 </p>
+            <a class="close" href="#"> Close details </a>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        function openWin() {
+            mywin = window.open("http://www.google.com","f1","width=200,height=200");
+            mywin.resizeTo(400,400);
+            //document.write("<h1> Hello from new window </h1>");
+            //mywin.document.write("<h1> Hello from new window </h1>");
+            //mywin.document.body.style.backgroundColor = "blue";
+            
+            //window.focus();
+            
+        }
+        function closeWin() {
+            if(confirm("Do u want to close?"))
+                mywin.close();
+        }
+    </script>
+</head>
+<body>
+    <button onclick="openWin()">Open New Window</button>
+    <button onclick="closeWin()"> Clsoe window</button>
+</body>
+</html>

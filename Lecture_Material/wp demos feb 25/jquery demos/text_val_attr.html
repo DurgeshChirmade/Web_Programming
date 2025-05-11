@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            alert("doc ready");
+            $("#text").click(function () {
+                //will not access any markups
+                //alert($("#desc").text());  //innerText
+                $("#desc").text("<u>Modified</u> content.......")
+            })
+            $("#html").click(function () {
+                //will access even markups along the text
+                //alert($("#desc").html());  //innerHTML
+                $("#desc").html("<u>Modified</u> content.......")
+            })
+            $("#attr").click(function () {
+                alert($("a").attr("href"));  //get the href attribute
+                $("a").attr("href","animation_effect.html") //set the href attribute
+            })
+            $("#value").click(function () {
+                //getter
+                alert($("#nm").val())     //value property
+                //setter
+                $("#nm").val("bakul joshi")
+            })
+            
+        })
+    </script>
+</head>
+<body>
+    <div style="background-color: yellow;width:300px;height:300px">
+        <h1> Learning JQuery </h1>
+        <p id="desc"> JQuery makes <b>JS coding</b> ver easy </p>
+        <p> Advanatages of jquery </p>
+        <ul>
+            <li> AJAX calls </li>
+            <li> HTML DOM manipulation </li>
+            <li> CSS Manipulation</li>
+        </ul>
+        <a href="#"> Learn more </a>
+        <br/>
+        <input type="text" name="nm" value="xxxx" id="nm" />
+    </div>
+    <button id="text"> Text content </button>
+    <button id="html"> HTML content </button>
+    <button id="attr"> Attribute </button>
+    <button id="value"> Value </button>
+</body>
+</html>

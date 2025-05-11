@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            alert("doc ready");
+            $("#in").click(function() {
+                $("div").fadeIn(4000);
+            })
+            $("#out").click(function() {
+                $("div").fadeOut("slow");
+            })
+            $("#toggle").click(function() {
+                $("div").fadeToggle("slow");
+            })
+            $("#to").click(function() {
+                $("#d1").fadeTo("slow",0.1)
+                $("#d2").fadeTo("slow",0.5)
+                $("#d3").fadeTo("slow",0.7)
+            })
+        })
+    </script>
+</head>
+<body>
+    <button id="in">Fade in boxes</button>
+    <button id="out">Fade out boxes</button>
+    <button id="toggle">Fade toggle boxes</button>
+    <button id="to">Fade To boxes</button>
+    <div id="d1" style="background-color: red;width:100px;height:100px;display:none">
+    </div>
+    <br/>
+    <div id="d2" style="background-color: blue;width:100px;height:100px;display:none">
+    </div>
+    <br/>
+    <div id="d3" style="background-color: green;width:100px;height:100px;display:none">
+    </div>
+</body>
+</html>

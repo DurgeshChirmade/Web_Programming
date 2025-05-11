@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Login Page</title>
+    
+</head>
+<body>
+    <!-- action - same page -->
+     <!-- method - get -->
+    <form   >
+        <label> Enter uid : </label>
+        <input type="text" name="uid" /> <br/>
+        <label> Enter pwd : </label>
+        <input type="password" name="pwd" />  <br/>
+        <input type="submit" value="LOGIN" />
+        <input type="reset" value="CLEAR" />
+     </form>
+    <br/>
+    <br/>
+     <form action="http://localhost:9000/logincheck" method="post">
+        <table>
+            <tr>
+                <td> <label> Enter uid : </label> </td>
+                <td> <input type="text" name="uid"/> </td>
+            </tr>
+            <tr>
+                <td> <label> Enter pwd : </label> </td>
+                <td>  <input type="password" name="pwd" /></td>
+            </tr>
+            <tr>
+                <td> <input type="submit" value="LOGIN" /> </td>
+                <td> <input type="reset" value="CLEAR" /> </td>
+            </tr>
+        </table>
+     </form>
+</body>
+</html>

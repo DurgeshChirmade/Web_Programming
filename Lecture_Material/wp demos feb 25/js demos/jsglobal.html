@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        function f1() {
+            //"99 99 888"  - 99
+
+            document.write("<br/>" + parseInt("  99  "));
+            document.write("<br/>" + parseInt("  99 99 888 "));
+            document.write("<br/>" + parseInt("  99.99 "));
+            document.write("<br/>" + parseInt("  99hello  "));
+            document.write("<br/>" + parseInt("hello99"));
+            document.write("<br/>**************<br/>");
+            document.write("<br/>" + parseFloat("  99  "));
+            document.write("<br/>" + parseFloat("  99 99 888 "));
+            document.write("<br/>" + parseFloat("  99.99 "));
+            document.write("<br/>" + parseFloat("  99hello  "));
+            document.write("<br/>" + parseFloat("hello99"));
+        }
+
+        function f2() {
+            document.write("<br/>" + isFinite(19));
+            document.write("<br/>" + isFinite(0));
+            document.write("<br/>" + isFinite(-9.6));
+            document.write("<br/>" + isFinite("he98hello"));
+            document.write("<br/>" + isFinite(9 - 8));
+            document.write("<br/>" + isFinite(24/5/2019));
+            document.write("<br/>**************<br/>");
+            document.write("<br/>" + isNaN(19));
+            document.write("<br/>" + isNaN(0));
+            document.write("<br/>" + isNaN(-9.6));
+            document.write("<br/>" + isNaN("he98hello"));
+            document.write("<br/>" + isNaN(9 - 8));
+            document.write("<br/>" + isNaN(24/5/2019));
+            document.write("<br/>**************<br/>");
+        }
+
+        function f3() {
+            document.write("<br/>" + Number(new Array(1, 2, 3, 4, 5)));  //NaN
+            document.write("<br/>" + Number(new Date()));  //no of miliseconds
+            document.write("<br/>" + Number("8888")); //8888
+            document.write("<br/>" + Number(new String("hello"))); //NaN
+            document.write("<br/>" + Number(true));   //1
+            document.write("<br/>**************<br/>");
+            document.write("<br/>" + String(new Array(1, 2, 3, 4, 5)));
+            document.write("<br/>" + String(new Date()));
+            document.write("<br/>" + String(new Boolean(1)));
+            document.write("<br/>**************<br/>");
+            var dt = new Date();
+            //getDay,
+            var dtstr = String(dt)
+            //can not use normal date functions
+            document.write(dtstr.split(" ").toString())
+        }
+
+        function f4() {
+            //var str = "~!@#$%^&*()";
+            //special char - specific symbol
+            //browser - sends data client to server
+            var str = "http://localhost:80/login.php?pwd=bakul%123";
+            var en_str = encodeURI(str);
+
+            document.write("<br/> Encoded : " + en_str);
+            //specific symbol - special character
+            //server - received data - decodes and process
+            var de_str = decodeURI(en_str);
+            document.write("<br/> Decoded : " + de_str);
+
+        }
+
+        function f5() {
+            //expression , JS statement - evaluated
+            document.write("<br/>" + eval("1*3"));
+            document.write("<br/>" + eval("a=10;b=20;a+b"));
+        }
+    </script>
+</head>
+<body>
+    <script>
+        f5();
+    </script>
+</body>
+</html>

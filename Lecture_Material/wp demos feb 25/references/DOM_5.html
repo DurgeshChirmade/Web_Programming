@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script>
+       /* function changeBackgroundColor(color) {
+            document.body.style.backgroundColor = color;
+        }*/
+        function changeBackgroundColor(btn) {
+            //alert(btn.innerText)
+            document.body.style.backgroundColor = btn.innerText;
+        }
+    </script>
+</head>
+<body>
+    <!--<button onclick="changeBackgroundColor(this.innerText)">Red</button>
+    <button onclick="changeBackgroundColor(this.innerText)">Green</button>
+    <button onclick="changeBackgroundColor(this.innerText)">Blue</button>-->
+
+    <button onclick="changeBackgroundColor(event.target)">Red</button>
+    <button onclick="changeBackgroundColor(event.target)">Green</button>
+    <button onclick="changeBackgroundColor(event.target)">Blue</button>
+
+
+</body>
+</html>

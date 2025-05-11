@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        function changeImg() {
+            var imgnode = document.getElementById("myimg");
+            w = imgnode.width;
+            h = imgnode.height;
+            s = imgnode.src;
+            imgnode.width = "300";
+            imgnode.height = "300";
+            imgnode.src = "images/Desktop.jpg"
+        }
+
+        function originalImg() {
+            var imgnode = document.getElementById("myimg");
+            imgnode.width = w;
+            imgnode.height = h;
+            imgnode.src = s;
+        }
+        
+    </script>
+</head>
+<body>
+    <img src="images/browesr.jpg" id="myimg"
+     width="200" height="200"
+     onmouseover="changeImg()" onmouseout="originalImg()" />
+</body>
+</html>

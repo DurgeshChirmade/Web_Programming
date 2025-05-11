@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        /*var btnode = document.createElement("button");
+        var txtnode = document.createTextNode("Click");
+        btnode.appendChild(txtnode);
+        btnode.setAttribute("onclick","f2()");
+        document.body.appendChild(btnode) */
+        function f1() {
+            var imgnode = document.createElement("img");
+            imgnode.setAttribute("src","images/Desert.jpeg");
+            imgnode.setAttribute("width","200");
+            imgnode.setAttribute("height","200");
+            //attaching event handler - dynamic generated html
+            //imgnode.setAttribute("onclick","f2()")
+            imgnode.addEventListener("click", function() {console.log("hi")});
+            document.body.appendChild(imgnode)
+        }
+
+        function f2() {
+            //alert("hi")
+            console.log("hi")
+        }
+    </script>
+</head>
+<body>
+    <button onclick="f1()"> Click Me </button>
+    
+</body>
+</html>

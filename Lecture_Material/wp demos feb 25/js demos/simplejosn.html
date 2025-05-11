@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        //data represented for one emplyee
+        var str = '{"empid":1001,"ename":"Bakul","mgr":true,"dept":{"deptid":10,"dname":"Projects"},"clients":["Wipro","TCS","TechM"]}';
+        var emp = JSON.parse(str);
+        document.write("<p>Empid :"+emp.empid+"</p>");
+        document.write("<p>Name :"+emp.ename+"</p>");
+        document.write("<p>Dept no  :"+emp.dept.deptid+"</p>");
+        document.write("<p>Dept no  :"+emp.clients.toString()+"</p>");
+
+        var str1 = '[{"empid":1001,"ename":"Bakul"},{"empid":1002,"ename":"Amit"},{"empid":1005,"ename":"Sonali"}]';
+        var emps = JSON.parse(str1);
+        alert(emps.length);
+        var s="<table border=1>";
+        for(i=0;i<emps.length;i++){
+            s+="<tr>";
+            s+="<td>"+emps[i].empid +"</td>";
+            s+="<td>"+emps[i].ename +"</td>";
+            s+="</tr>";
+        }
+        s+="</table>";
+        document.write(s);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

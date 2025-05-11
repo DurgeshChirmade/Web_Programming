@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="jquery-3.7.1.min.js"> </script>
+    <script>
+        $(document).ready(function() {
+            alert("doc ready")
+            $("#state").change(function() {
+                var sid = $(this).val();
+                var url = "http://localhost:9000/getCities?stateid="+sid;
+                alert(url)
+                $.get(url , function(data,status){
+                    if(status == "success") {
+                        $("#cities").html(data);
+                    }
+                })
+            })
+        })
+    </script>
+</head>
+<body>
+    <form>
+        .....
+        <br/>
+        Select state : 
+        <select name="state" id="state">
+            <option>(select one)</option>
+            <option value="1">Maharashtra</option>
+            <option value="2">Karnataka</option>
+            <option value="3">Madhya Pradesh</option>
+        </select>
+        <br/>
+        Select state : 
+        <select name="city" id="cities">
+            
+        </select>
+        <br/>
+        ......
+        <br/>
+        <input type="submit" value="Register" />
+    </form>
+</body>
+</html>

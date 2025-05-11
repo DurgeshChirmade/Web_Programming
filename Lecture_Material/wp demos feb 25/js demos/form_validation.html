@@ -22,12 +22,47 @@
             }
 
             //pwd validation
+            var pwd = document.getElementById("pwd").value;
+            if(pwd.length <= 8 || pwd.length >= 12){
+                //alert("uid should be 6-12 characters");
+                document.getElementById("pwderror").innerHTML= "pwd should be 8-12 characters";
+                document.getElementById("pwd").value="";
+                document.getElementById("pwd").focus();
+                return;
+            }
 
-
+            var spflag = false;
+            var numflag = false;
+            var capital = false;            
+            for(i=0;i<pwd.length;i++){
+                ascii = pwd.charCodeAt(i);
+                if(ascii >= 65 && ascii <= 90)
+                    capital = true;
+                if(ascii >= 48 && ascii <= 57)
+                    numflag = true;
+                if(!((ascii >= 65 && ascii <= 90) || (ascii >= 97 && ascii <= 122) || (ascii >= 48 && ascii <= 57)))
+                    spflag = true;
+            }
+            if(numflag==false || spflag == false || capital == false ){
+                document.getElementById("pwderror").innerHTML= "Invalid pwd";
+                document.getElementById("pwd").value="";
+                document.getElementById("pwd").focus();
+                return;
+            }
 
             //gender validation
+            //alert(document.f1.gender.value)
+            if(document.f1.gender.value == "") {
+                document.getElementById("gendererror").innerHTML= "Select one radio button";
+                return;
+            }
 
-
+            //city validation
+            //alert(document.f1.city.value);
+            if(document.f1.city.value == "x") {
+                document.getElementById("cityerror").innerHTML= "Select city option";
+                return;
+            }
 
             //data is valid
             //submit the data
@@ -56,11 +91,22 @@
         <span style="color: red;" id="uiderror">XXXX</span>
         <br/>
         Enter pwd :
-        <input type="password" name="pwd" />
+        <input type="text" name="pwd" id="pwd"/>
+        <span style="color: red;" id="pwderror">XXXX</span>
         <br/>
         Select gender :
         <input type="radio" name="gender" value="M" /> Male
         <input type="radio" name="gender" value="F" /> Female
+        <span style="color: red;" id="gendererror">XXXX</span>
+        <br/>
+        Enter city :
+        <select name="city">
+            <option value="x">(select one)</option>
+            <option value="C01">Pune</option>
+            <option value="C08">Mumbai</option>
+            <option value="C89">Bangalore</option>
+        </select>
+        <span style="color: red;" id="cityerror">XXXX</span>
         <br/>
         <input type="button" value="Submit" 
         onclick="validation()"/>

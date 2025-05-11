@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            alert("doc ready");
+            $("#remove").click(function() {
+                $("div").remove();   //selected and child
+            })
+            $("#empty").click(function() {
+                $("div").empty();   //child of selected
+            })
+            $("#before").click(function() {
+                //h1 becomes previous sibling of div
+                //outside the selected element
+               $("div").before("<h1> Client side technologies </h1>")
+            })
+            $("#after").click(function() {
+                //img becomes next sibling of div
+                //outside the selected element
+                $("div").after("<img src='images/Desert.jpeg' width='200' height='200'/>")
+            })
+            $("#prepend").click(function() {
+                //added element becomes first child of selected element
+                //within the div
+                $("div").prepend("<h6> Client side technologies </h6>")
+            });
+            $("#append").click(function() {
+                //added element becomes last child of selected element
+                //within the div
+                $("div").append("<a href='#'> Test ur knowledge </a> ")
+            });
+        })
+    </script>
+</head>
+<body>
+    <div style="background-color: yellow;width:300px;height:300px">
+        <h1> Learning JQuery </h1>
+        <p> JQuery makes JS coding ver easy </p>
+        <p> Advanatages of jquery </p>
+        <ul>
+            <li> AJAX calls </li>
+            <li> HTML DOM manipulation </li>
+            <li> CSS Manipulation</li>
+        </ul>
+        <a href="#"> Learn more </a>
+    </div>
+    <button id="remove">Remove div</button>
+    <button id="empty">Empty div</button>
+    <br/>
+    <button id="before">Before div</button>
+    <button id="after">After div</button>
+    <br/>
+    <button id="prepend">Prepend in div</button>
+    <button id="append">Append in div</button>
+</body>
+</html>

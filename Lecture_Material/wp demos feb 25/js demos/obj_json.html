@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <script>
+        //js object
+       var emp = { empid: 1001, ename: "bakul", sal: 12000.00, mgr: false };
+       //keys array
+       var keys = Object.keys(emp);
+       keys.forEach( key => {
+           /*switch(key) {
+               case empid:
+                   break;
+               case ename: 
+                   break;
+               case sal:
+                   
+           } */
+          document.write("<br/>"+ key + " : "+ emp[key]);
+       })
+       document.write("<br/>********<br/>")
+       var entries = Object.entries(emp)
+       entries.forEach( entry => {
+            const [k,v] = entry;
+            document.write("<br/>"+ k + " : "+ v);
+       })
+       document.write("<br/>********<br/>")
+       var empjson = JSON.stringify(emp)
+       //empjson - send - server
+       document.write("<br/>"+empjson );
+   </script>
+</head>
+<body>
+    
+</body>
+</html>
