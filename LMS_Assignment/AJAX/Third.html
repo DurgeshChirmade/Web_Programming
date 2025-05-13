@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX Page</title>
+    <style>
+        .input-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        label {
+            margin-right: 10px; 
+            width: 120px; 
+            display: inline-block;
+            text-align: right;
+        }
+
+        input {
+            margin-right: 10px; 
+            width: 200px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <form action="">
+        <div class="input-row">
+            <label for="uid">Enter Userid : </label>
+            <input type="text" name="uid" id="uid" onblur="checkUserId()" />
+            <span id="duid">...</span>
+        </div>
+        <div class="input-row">
+            <label for="pwd">Enter Password : </label>
+            <input type="password" name="pwd" id="pwd" />
+            <span id="dpass">...</span>
+        </div>
+        <br><br>
+        <button type="submit">submit</button>
+        <button type="reset">clear</button>
+    </form>
+</body>
+<script>
+    function createAjaxObject(){
+        try{
+            return new XMLHttpRequest();
+        }
+        catch(e){
+            try{
+                return new ActiveXObject('Microsoft.XMLHTTP');
+            }
+            catch(e){
+                alert('Browser does not support AJAX');
+                return null;
+            }
+        }
+    }
+
+    function checkUserId(){
+        var ajax=createAjaxObject();
+        if(!ajax) 
+            return;
+
+        var userid=document.getElementById('uid').value;
+        var infoDiv=document.getElementById('duid').value;
+
+        if(!userid){
+            infoDiv.innerHTML=`<span class="message">Please enter a User ID</span>`;
+            return;
+        }
+
+        ajax.onreadystatechange=()=>{
+            if(ajax.readystate==4 && ajax.status==200){
+                try{
+                    var response=JSON.parse(ajax.responseText);
+                    infoDiv.innerHTML=`<span></span>`;
+                }
+                catch(e){
+                    infoDiv.innerHTML=`<span class="message">Error Processing Response</span>`;
+                }
+            }
+        }
+    }
+</script>
+
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Html Basics</title>
+</head>
+
+<body>
+    <script>
+        //1. Literal Syntax For Creating Object
+        /*
+        var person = { No: 10, Name: "Durgesh", Address: "Pune" };
+        console.log(person.Name);
+        console.log(person);
+        person.isHappy = true;
+        console.log(person);
+        delete person.Name;
+        console.log(person);
+
+        var emp = {};
+        emp.__proto__ = person;
+        console.log(emp);
+        console.log(emp.Name);
+
+        emp.Dept = "IT";
+        console.log(emp);
+        */
+
+        //2. Constructor Function Syntax for creating class / Object
+        /*
+        var Person=function (no,name,address){
+            this.No=no;
+            this.Name=name;
+            this.Address=address;
+
+            this.Print=function(){
+                console.log(this.No+" "+this.Name+" "+this.Address);
+            };
+        };
+
+        var p1=new Person(101,"Durgesh","Pune");
+        var p2=new Person(102,"Ajay","Mumbai");
+
+        p1.Print();
+        p2.Print();
+        */
+
+        //3: Class Keyword Syntax for creating class / Object
+        class Person{
+            constructor(no,name,address){
+                this.No=no;
+                this.Name=name;
+                this.Address=address;
+            }
+
+            Print(){
+                console.log(this.No+" "+this.Name+" "+this.Address);
+            }
+        }
+
+        var p1=new Person(103,"Durgesh","Pune");
+        var p2=new Person(104,"Ajay","Mumbai");
+
+        p1.Print();
+        p2.Print();
+
+        class Emp extends Person {}
+
+        var p1=new Emp(103,"Durgesh","Pune");
+        var p2=new Emp(104,"Ajay","Mumbai");
+
+        p1.Print();
+        p2.Print();
+
+    </script>
+</body>
+
+</html>
